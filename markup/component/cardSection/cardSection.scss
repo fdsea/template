@@ -1,0 +1,15 @@
+.card_section{
+    width: 100%;
+    .card_section_caption{
+        margin-top: 5%;
+        margin-bottom: 5%;
+        font-size: 2em;
+        color: red;
+        text-align: center;
+    }
+}
+&:after{
+    content: "";
+    display: table;
+    clear: both;
+}

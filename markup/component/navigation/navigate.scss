@@ -1,0 +1,157 @@
+
+$time: 0.3s;
+$timing: ease-in-out;
+$color_nav_span: #fff;
+$color_nav_nover: red;
+
+.nav-btn {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	cursor: pointer;
+	z-index: 1000;
+	&:hover span {
+		background: $color_nav_nover;
+	}
+	.span_nav {
+		position: absolute;
+		width: 100%;
+		height: 20%;
+		background: $color_nav_span;
+		border-radius: 5px;
+		transition: .5s ease;
+	}
+	@for $i from 1 through 3 {
+		.span-#{$i} {
+			top: $i*30%-30%;
+		}
+	}
+}
+
+
+/*==== NAV ANIMATION ====*/
+
+.active-stix-1 {
+	animation: stix-1 $time $timing forwards;
+	@keyframes stix-1 {
+		0% {
+			transform: rotate(0deg);
+			width: 0;
+		}
+		100% {
+			transform: rotate(45deg) translate(10px, 14px);
+			width: 100%;
+		}
+	}
+}
+
+.active-stix-2 {
+	animation: stix-2 $time $timing forwards;
+	@keyframes stix-2 {
+		0% {
+			opacity: 1;
+		}
+		10% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 0;
+		}
+	}
+}
+
+.active-stix-3 {
+	animation: stix-3 $time $timing forwards;
+	@keyframes stix-3 {
+		0% {
+			transform: rotate(0deg);
+			width: 0;
+		}
+		100% {
+			transform: rotate(-45deg) translate(7px, -11px);
+			width: 100%;
+		}
+	}
+}
+
+.inactive-stix-1 {
+	animation: stix-1-inact $time $timing forwards;
+	@keyframes stix-1-inact {
+		0% {
+			transform: rotate(45deg) translate(10px, 14px);
+		}
+		100% {
+			transform: rotate(0deg);
+		}
+	}
+}
+
+.inactive-stix-2 {
+	animation: stix-2-inact $time $timing forwards;
+	@keyframes stix-2-inact {
+		0% {
+			opacity: 0;
+		}
+		90% {
+			opacity: 1;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+}
+
+.inactive-stix-3 {
+	animation: stix-3-inact $time $timing forwards;
+	@keyframes stix-3-inact {
+		0% {
+			transform: rotate(-45deg) translate(7px, -11px);
+		}
+		100% {
+			transform: rotate(0deg);
+		}
+	}
+}
+
+.popup-nav {
+	position: fixed;
+	top: 0;
+	right: -50%;
+	width: 50%;
+	height: 100%;
+	background: rgba(0, 0, 0, .8);
+	transition: 0.5s ease;
+	ul {
+		font-size: 2em;
+        text-align: center;
+        width: 100%;
+		li {
+            list-style-type: none;
+             width: 100%;
+            
+			a {
+				text-decoration: none;
+				display: block;
+				margin-bottom: 15px;
+				color: #fff;
+				text-transform: uppercase;
+				transition: 0.2s ease;
+				&:hover {
+					color: $color_nav_nover;
+				}
+			}
+		}
+        li:first-child{
+            margin-top: 100px;
+        }
+	}
+}
+
+.active-nav {
+	right: 0;
+}
+
+
+/*======= END =======*/

@@ -1,0 +1,39 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+    <head>
+        {{> head/head head.defaults}}
+    </head>
+
+    <body class="page">
+        %=symbols=%
+
+        <section class="page__wrapper">
+
+           {{> topHeader/topHeader topHeader.defaults}}
+           {{> cardSection/cardSection cardSection.defaults}}
+           {{> cardSection/cardSection cardSection.custom}}
+           
+           <div class="form_wrap">
+               {{> form/form form.defaults}}
+           </div>
+           
+        
+        </section>
+        
+            <div class="page__buffer"></div>
+
+       
+       
+        <footer class="page__footer">
+            {{> footer/footer footer.defaults}}
+        </footer>
+
+        <script src="%=static=%js/separate-js/svg4everybody.min.js"></script>
+        <script>svg4everybody();</script>
+
+        <!-- Main scripts. You can replace it, but I recommend you to leave it here     -->
+        <script src="%=static=%js/main%=hash=%%=min=%.js"></script>
+    </body>
+
+</html>

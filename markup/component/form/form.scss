@@ -1,0 +1,28 @@
+.input_first{
+    width: 300px;
+    height: auto;
+    input,
+    textarea{
+        width: 100%;
+        border: 1px solid #aaa;
+        margin-bottom: 2%;
+        padding: 5px;
+        font-size: 1.5em;
+        outline: none;
+        transition: .035s ease;
+        &:focus{
+            border-color: orange;
+        }
+    }
+    textarea{
+        font-size: 1em;
+    }
+    button{
+       margin: 0 7%;
+    }
+    
+    input::-webkit-input-placeholder{color: #aaa;font-size: 0.7em;}
+    input::-ms-input-placeholder{color: #aaa;font-size: 0.7em;}
+    input::-moz-placeholder{color: #aaa;font-size: 0.7em;}
+    input::placeholder{color: #aaa;font-size: 0.7em;}
+}

@@ -1,0 +1,7 @@
+<form action="" class="input_first">
+     {{#if visible_1}}<input type="text" class="input_name" placeholder="{{name}}" required>{{/if}}
+     {{#if visible_2}}<input type="text" class="input_phone" placeholder="{{phone}}" required>{{/if}}
+     {{#if visible_3}}<input type="text" class="input_email" placeholder="{{email}}" required>{{/if}}
+     {{#if visible_4}}<textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>{{/if}}
+     {{> button/button formButton.secondClass}}
+</form>
